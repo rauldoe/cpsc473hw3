@@ -1,7 +1,7 @@
 (function(window) {
   'use strict';
 
-  var App = window.App || {}
+  var App = window.App || {};
   var $ = window.jQuery;
 
   function FormHandler(selector) {
@@ -19,6 +19,7 @@
 
   FormHandler.prototype.addSubmitHandler = function(fn) {
     this.$formElement.on('submit', function(event) {
+
       event.preventDefault();
 
       var data = {};
