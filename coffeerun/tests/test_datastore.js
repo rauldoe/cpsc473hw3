@@ -1,4 +1,3 @@
-
 function test_obj_datastore(window) {
   window = window || {};
   var App = window.App;
