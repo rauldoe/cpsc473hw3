@@ -2,6 +2,7 @@ var sourceDataStore = "../scripts/datastore.js";
 var sourceTruck = "../scripts/truck.js";
 var sourceTestDataStore = "./test_datastore.js";
 var sourceTestTruck = "./test_truck.js";
+var sourceMainTest = "./main_test.js";
 
 var window = {};
 var fs = require("fs");
@@ -17,7 +18,5 @@ fileData = fs.readFileSync(sourceTruck, 'utf8');
 eval(fileData);
 fileData = fs.readFileSync(sourceTestTruck, 'utf8');
 eval(fileData);
-
-var truckId = "test_id-nodejs";
-var ds = test_obj_datastore(window);
-test_obj_truck(window, truckId, ds);
+fileData = fs.readFileSync(sourceMainTest, 'utf8');
+eval(fileData);
