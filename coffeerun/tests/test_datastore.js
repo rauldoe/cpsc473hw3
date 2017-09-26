@@ -1,11 +1,21 @@
 
-function test() {
+function test_obj_datastore(window) {
+  window = window || {};
+  var App = window.App;
+
+  var data = {};
   var ds = new App.DataStore();
   ds.add('m@bond.com', 'tea');
   ds.add('james@bond.com', 'eshpressho');
-  d.getAll();
+  data = ds.getAll();
+  console.log(data);
   ds.remove('james@bond.com');
-  ds.getAll();
-  ds.get('m@bond.com');
-  ds.get('james@bond.com');
-};
+  data = ds.getAll();
+  console.log(data);
+  data = ds.get('m@bond.com');
+  console.log(data);
+  data = ds.get('james@bond.com');
+  console.log(data);
+
+  return ds;
+}
